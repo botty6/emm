@@ -1,0 +1,145 @@
+<!-- ====================================================================== -->
+<!-- File: index.html                                                       -->
+<!-- ====================================================================== -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Download the App</title>
+    <meta name="description" content="Responsive landing page with Android and iOS download buttons." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Why: tiny critical CSS; the rest is Tailwind */
+      .hero-bg { background-image: url('/assets/hero-bg.jpg'); }
+      .btn-ring:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(255,255,255,0.4); }
+      .backdrop { background: radial-gradient(80% 60% at 50% 40%, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.85) 100%); }
+    </style>
+  </head>
+  <body class="min-h-dvh bg-black text-white antialiased">
+    <main class="relative min-h-dvh w-full overflow-hidden">
+      <!-- Background -->
+      <div class="absolute inset-0 -z-10">
+        <div class="hero-bg h-full w-full bg-cover bg-center"></div>
+        <div class="absolute inset-0 backdrop"></div>
+      </div>
+
+      <!-- Header -->
+      <header class="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-5">
+        <!-- Replace with your licensed logo -->
+        <img src="/assets/logo.png" width="140" height="38" alt="Brand logo" class="select-none" />
+        <div class="hidden sm:flex items-center gap-3 text-sm text-white/80">
+          <span class="hidden md:inline">Secure downloads</span>
+          <span aria-hidden>•</span>
+          <a href="#support" class="underline-offset-4 hover:underline focus-visible:underline">Support</a>
+        </div>
+      </header>
+
+      <!-- Hero -->
+      <section class="mx-auto flex max-w-3xl flex-col items-center px-6 text-center">
+        <h1 class="mt-10 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Get the app on your device</h1>
+        <p class="mt-3 max-w-2xl text-base text-white/80 sm:text-lg">Fast setup. Private by default. Works on Android and iOS.</p>
+
+        <!-- Store buttons -->
+        <div class="mt-8 grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
+          <!-- Android -->
+          <a
+            class="btn-ring group inline-flex items-center justify-center gap-3 rounded-2xl bg-white/10 px-5 py-4 transition hover:bg-white/15 active:scale-[0.99]"
+            href="#REPLACE_WITH_VERIFIED_ANDROID_URL"
+            target="_blank" rel="noopener noreferrer"
+            aria-label="Download for Android"
+          >
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-black/40">
+              <!-- Android icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor" aria-hidden="true">
+                <path d="M17.6 9.48h1.6v6.24a1.6 1.6 0 0 1-1.6 1.6h-1.6V9.48h1.6Zm-13.8 0h1.6v7.84H3.8a1.6 1.6 0 0 1-1.6-1.6V9.48h1.6Zm3.2 0h7.84v9.44H7Zm-1.2-3.2a.8.8 0 1 1 1.6 0v1.6H5.8v-1.6Zm10 0a.8.8 0 1 1 1.6 0v1.6h-1.6v-1.6ZM7.6 4.08 9 .88l.8 1.12-1.4 1.2a4.9 4.9 0 0 1 6.2 0l-1.4-1.2L14 .88l1.4 1.2a.75.75 0 0 1 .1 1.04.8.8 0 0 1-1.1.1 3.4 3.4 0 0 0-4.8 0 .8.8 0 0 1-1.1-.1.75.75 0 0 1 .1-1.04Z"/>
+              </svg>
+            </span>
+            <span class="flex flex-col text-left">
+              <span class="text-xs text-white/70">Get it on</span>
+              <span class="text-lg font-semibold">Android</span>
+            </span>
+          </a>
+
+          <!-- iOS -->
+          <a
+            class="btn-ring group inline-flex items-center justify-center gap-3 rounded-2xl bg-white/10 px-5 py-4 transition hover:bg-white/15 active:scale-[0.99]"
+            href="#REPLACE_WITH_VERIFIED_IOS_URL"
+            target="_blank" rel="noopener noreferrer"
+            aria-label="Download for iOS"
+          >
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-black/40">
+              <!-- Apple icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor" aria-hidden="true">
+                <path d="M16.36 1.64a5.7 5.7 0 0 1-1.3 4.46 4.45 4.45 0 0 1-3.46 1.66 5.23 5.23 0 0 1 1.3-4.23A5.54 5.54 0 0 1 16.36 1.64ZM20.47 17.6c-.37.85-.82 1.64-1.36 2.38-.72 1-1.3 1.69-1.74 2.06a3.65 3.65 0 0 1-2.33.85 3.2 3.2 0 0 1-1.19-.24 3.82 3.82 0 0 1-1.1-.63c-.38-.28-.87-.44-1.37-.44-.52 0-1 .16-1.41.45a3.74 3.74 0 0 1-1.13.61 3.33 3.33 0 0 1-1.16.21 3.43 3.43 0 0 1-2.46-1.36c-.45-.51-1.05-1.3-1.8-2.39a12.76 12.76 0 0 1-1.53-3.06A9.97 9.97 0 0 1 1.96 13c0-1.34.28-2.6.86-3.8a6.52 6.52 0 0 1 2.3-2.72A6.12 6.12 0 0 1 8.62 5a3.9 3.9 0 0 1 1.57.37c.49.21.92.33 1.27.33.3 0 .72-.11 1.27-.33.55-.22 1.1-.33 1.65-.33 1.17 0 2.22.31 3.15.94a6.04 6.04 0 0 1 2.23 2.58 5.89 5.89 0 0 1 .76 2.96c0 1.14-.2 2.24-.6 3.3-.24.62-.51 1.22-.87 1.88Z"/>
+              </svg>
+            </span>
+            <span class="flex flex-col text-left">
+              <span class="text-xs text-white/70">Download on</span>
+              <span class="text-lg font-semibold">iOS</span>
+            </span>
+          </a>
+        </div>
+
+        <p class="mt-6 text-xs text-white/60">Use of brand assets requires proper rights. Replace logo/background with your licensed files.</p>
+      </section>
+
+      <!-- Bottom CTA -->
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 mb-6 flex justify-center px-6">
+        <a
+          class="pointer-events-auto inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 py-3 text-sm font-medium text-white/90 transition hover:bg-white/15 btn-ring"
+          href="#REPLACE_WITH_VERIFIED_RECOMMENDATIONS_URL"
+          target="_blank" rel="noopener noreferrer"
+          aria-label="Free recommendations"
+        >
+          <!-- Sparkles icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2l1.7 3.9L18 7.6l-3.4 2.7.9 4.2L12 12.9 8.5 14.5l.9-4.2L6 7.6l4.3-1.7L12 2zM20 14l.9 2 2.1.9-2.1.9L20 20l-.9-2-2.1-.9 2.1-.9L20 14zM6 16l.6 1.4 1.4.6-1.4.6L6 20l-.6-1.4L4 18l1.4-.6L6 16z"/>
+          </svg>
+          Free recommendations
+        </a>
+      </div>
+
+      <!-- Footer -->
+      <footer id="support" class="mx-auto mt-20 w-full max-w-7xl px-6 pb-10">
+        <div class="text-xs text-white/60">
+          <p>Questions? Email <a href="mailto:support@example.com" class="underline underline-offset-4">support@example.com</a></p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
+
+<!-- ====================================================================== -->
+<!-- File: vercel.json (optional)                                           -->
+<!-- ====================================================================== -->
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "no-referrer-when-downgrade" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" }
+      ]
+    }
+  ]
+}
+
+<!-- ====================================================================== -->
+<!-- File: assets/README.md                                                 -->
+<!-- ====================================================================== -->
+# Assets
+Put your licensed files here:
+- logo.png
+- hero-bg.jpg
+
